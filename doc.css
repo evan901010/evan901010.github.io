@@ -1,0 +1,45 @@
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+
+.heart {
+  top: 40%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.st1,
+.st2,
+.st3,
+.st4 {
+  fill: #ED1C24;
+}
+
+svg {
+  position: absolute;
+}
+
+h1 {
+  font-family: monospace;
+  font-weight: 200;
+  color: #ED1C24;
+  text-align: center;
+  margin-top: 310px;
+  opacity: 0;
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+}

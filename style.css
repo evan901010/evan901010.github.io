@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body
+{
+    min-height: 100vh;
+    background: linear-gradient(#3e4f57, #3e4f57);
+    overflow-x: hidden;
+    color:#3e4f57
+}
+
+header
+{  
+    font-family: 'Press Start 2P', serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header .logo
+{
+    font-family: 'Press Start 2P', serif;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a
+{
+    
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active
+{
+    background: #fff;
+    color: #000000;
+
+}
+
+section
+{
+    position: relative;
+    width: 100%;
+    height: 155vh;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+section::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to top, #061415, transparent);
+    z-index: 1000;
+}
+
+section img 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section img#moon
+{
+    mix-blend-mode: screen;
+}
+
+section img#bush
+{
+    z-index: 10;
+}
+
+section img#frontleaves
+{
+    z-index: 10;
+}
+
+section img#tree
+{
+    
+    z-index: 10;
+}
+
+
+#btn
+{
+    font-family: 'Press Start 2P', serif;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #061415;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(-110px);
+}
+
+.sec
+{
+    position: relative;
+    padding: 100px;
+    background: #061415;
+}
+
+.sec h2
+{
+    TEXT-ALIGN: center;
+    font-family: 'Press Start 2P', serif;
+    font-size: 1.55em;
+    margin-bottom: 10px;
+    color: #696969;
+}
+
+.sec h1
+{
+    TEXT-ALIGN: center;
+    font-family: 'Press Start 2P', serif;
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #000000;
+    margin-bottom: 30px;
+    font-weight:bold;
+}
+
+.sec p
+{
+    font-family: 'Press Start 2P', serif;
+    font-size: 0.5;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: stretch;
+    align-items: center;
+    column-gap: 25px;
+    row-gap: 40px;
+  }
+  
+  .content {
+    border-radius: 31px;
+    color: #242424;
+    background-color: #2f4f4f;
+    font-weight: 600;
+    text-align: center;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 10px;
+  }
+
+.skill_img{
+    width:80px;
+    height:80px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.skill_img2{
+    width:100px;
+    height:100px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.skill_p1{
+    line-height: 1.95;
+    font-size: 20%;
+    margin-bottom: 50px;
+    color: #000000;
+}
+
+.skill_h3{
+    font-family: 'Press Start 2P', serif;
+    line-height: 1.95;
+    font-size: 19px;
+    margin-bottom: 20px;
+    color: #b8a1cf;
+}
+
+.skill_h4{
+    font-family: 'Press Start 2P', serif;
+    line-height: 1.95;
+    font-size: 19px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    color: #b8a1cf;
+}
+
+.list_1{
+    list-style-type: none;
+    color: #000000;
+    margin-bottom: 50px;
+}
+
+.list_content{
+    font-family: 'Press Start 2P', serif;
+    font-size: 1px;
+    line-height: 1.95;
+    color: #000000;
+}
+
+.skill_p2{
+    font-family: 'Press Start 2P', serif;
+    font-size: 1px;
+    color: #000000;
+   
+}
+
+.intro{
+    font-family: 'Press Start 2P', serif;
+    line-height: 1.95;
+    font-size: 1px;
+    color: #cca3cc;  
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
+* {
+  -moz-box-sizing: inherit;
+       box-sizing: inherit;
+  -webkit-transition-property: all;
+          transition-property: all;
+  -webkit-transition-duration: .6s;
+          transition-duration: .6s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+html,
+body {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #3e4f57;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.buttons {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: table-cell;
+  padding: 1em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+h1.heading {
+  color: #fff;
+  font-size: 1.25em;
+  font-weight: 900;
+  margin: 0 0 0.5em;
+}
+@media (min-width: 450px) {
+  h1.heading {
+    font-size: 1.75em;
+  }
+}
+@media (min-width: 760px) {
+  h1.heading {
+    font-size: 3.25em;
+  }
+}
+@media (min-width: 900px) {
+  h1.heading {
+    font-size: 4.25em;
+    margin: 0 0 0.5em;
+  }
+}
+ 
+.btnfos {
+  font-family: 'Press Start 2P', serif;
+  color: #b8a1cf;
+  cursor: pointer;
+  display: block;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 160px;
+  margin: 0 auto 2em;
+  position: relative;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 100%;
+}
+@media (min-width: 400px) {
+  .btnfos {
+    display: inline-block;
+    margin-right: 0em;
+  }
+  .btnfos:nth-of-type(even) {
+    margin-right: 0;
+  }
+}
+@media (min-width: 600px) {
+  .btnfos:nth-of-type(even) {
+    margin-right: 0em;
+  }
+  .btnfos:nth-of-type(5) {
+    margin-right: 0;
+  }
+}
+
+.btnfos-2 {
+    letter-spacing: 0;
+
+  }
+  
+  .btnfos-2:hover,
+  .btnfos-2:active {
+    letter-spacing: 5px;
+  }
+  
+  .btnfos-2:after,
+  .btnfos-2:before {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border: 1px solid rgba(255, 255, 255, 0);
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    -webkit-transition: all 280ms ease-in-out;
+            transition: all 280ms ease-in-out;
+    width: 0;
+  }
+  
+  .btnfos-2:hover:after,
+  .btnfos-2:hover:before {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-color: #fff;
+    -webkit-transition: width 350ms ease-in-out;
+            transition: width 350ms ease-in-out;
+    width: 70%;
+  }
+  
+  .btnfos-2:hover:before {
+    bottom: auto;
+    top: 0;
+    width: 70%;
+  }

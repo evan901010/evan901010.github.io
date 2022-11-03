@@ -1,121 +1,82 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Pacman</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-  </head>
-  <body>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-      </div>
-      <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Pacman</div>
-      </div>
+<html>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <header>
+        <a href="#" class="logo">Portfolio</a>
+        <style type="text/css">
+        @import url(style.css);
+        </style>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#content" >About</a></li>
+            <li><a href="./doc.html">Contact</a></li>
+            <li><a href="./log/log.html"  >Sign Up/In</a></li>
+            <li><a id="signOut" href="index.html">Sign Out</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="main_bg/background4.png" id="bg4">
+        <img src="main_bg/background1.png" id="bg1">
+        <img src="main_bg/background2.png" id="bg2">
+        <img src="main_bg/background3.png" id="bg3">
+
+        <img src="main_bg/tree.png" id="tree">
+
+        <img src="main_bg/frontleaves.png" id="leaves_front">
+        <img src="main_bg/bush.png" id="bush">
+        
+        
+    </section>
+    
+    <div class="sec" id="sec">
+        <h2>Greeting! I'm Evan. Nice to meet you.</h2>
+        <p class="intro" >As a CS-major student, I take a fancy to computer graphics and video game design, I also fond of UI/UX design. This website is established to upload my works, they can be varied, but most can divide into the following two parts, hope you enjoy it.</p>
+        <div class="grid">
+            <div class="item">
+              <div class="content" id='content'>
+                <img src="skill/des.png" id="des" class="skill_img">
+                <h1 >Designer</h1>
+                <p class="skill_p1">I design retro-style pixel art, interactive UI/UX, and video game level design.</p>
+                <h3 class="skill_h3">Things I enjoy designing:</h3>
+                <p class="skill_p2">UX, UI, Games, Concept Art. </p>
+                <h4 class="skill_h4">Design Tools:</h4>
+                <ul class="list_1">
+                  <li class="list_content">Aseprite</li>
+                  <li class="list_content">Photoshop</li>
+                  <li class="list_content">Figma</li>
+                  <li class="list_content">Chat Mapper</li>
+                  <li class="list_content">Adobe Illustrator</li>
+                </ul>
+                <a class="btnfos btnfos-2" href="des/design.html"  >MORE WORKS</a> 
+              </div>
+            </div>
+            <div class="item">
+              <div class="content">
+                <img src="skill/dev.png" id="des"class="skill_img2">
+                <h1 >Developer</h1>
+                <p class="skill_p1">Research about Computer Graphic take up the largest proportion in my academic life.</p>
+                <h3 class="skill_h3">Languages I speak:</h3>
+                <p class="skill_p2">C#, C++, PYTHON, HTML, CSS. </p>
+                <h4 class="skill_h4">Dev Tools:</h4>
+                <ul class="list_1">
+                  <li class="list_content">VS Code</li>
+                  <li class="list_content">Unity</li>
+                  <li class="list_content">Unreal</li>
+                  <li class="list_content">OpenGL</li>
+                  <li class="list_content">OpenCV</li>
+                </ul>
+                <a class="btnfos btnfos-2" href="dev/develop.html" >MORE WORKS</a> 
+              </div>
+            </div>
+          </div>
+        
     </div>
-    <script>
-      var container = document.querySelector("#unity-container");
-      var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      var warningBanner = document.querySelector("#unity-warning");
 
-      // Shows a temporary message banner/ribbon for a few seconds, or
-      // a permanent error message on top of the canvas if type=='error'.
-      // If type=='warning', a yellow highlight color is used.
-      // Modify or remove this function to customize the visually presented
-      // way that non-critical warnings and error messages are presented to the
-      // user.
-      function unityShowBanner(msg, type) {
-        function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-        }
-        var div = document.createElement('div');
-        div.innerHTML = msg;
-        warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
-            warningBanner.removeChild(div);
-            updateBannerVisibility();
-          }, 5000);
-        }
-        updateBannerVisibility();
-      }
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="./log/out.js"></script>
+    <script src="index.js"></script>
 
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Downloads.loader.js";
-      var config = {
-        dataUrl: buildUrl + "/Downloads.data",
-        frameworkUrl: buildUrl + "/Downloads.framework.js",
-        codeUrl: buildUrl + "/Downloads.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "hi",
-        productName: "Pacman",
-        productVersion: "1.0",
-        showBanner: unityShowBanner,
-      };
-
-      // By default Unity keeps WebGL canvas render target size matched with
-      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-      // Set this to false if you want to decouple this synchronization from
-      // happening inside the engine, and you would instead like to size up
-      // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
-
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
-
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-        container.className = "unity-mobile";
-
-        // To lower canvas resolution on mobile devices to gain some
-        // performance, uncomment the following line:
-        // config.devicePixelRatio = 1;
-
-        canvas.style.width = window.innerWidth + 'px';
-        canvas.style.height = window.innerHeight + 'px';
-
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
-      } else {
-        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
-      }
-
-      loadingBar.style.display = "block";
-
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
-    </script>
-  </body>
 </html>

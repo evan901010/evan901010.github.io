@@ -1,0 +1,30 @@
+<html>
+    <link rel="stylesheet" href="style.css">
+    <head>
+        <title>Form</title>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+        <script src="log.js"></script>
+    </head>
+    <body>
+
+        
+        <div class="formContainer">
+            <div class="wrapper">
+                <div class="typing-demo">
+                  This is Evan's page.
+                </div>
+            </div>
+
+                <input type="email" placeholder="email" id="email"/>
+                <input type="password" placeholder="password" id="password"/>
+
+                <button onclick="signIn()" id="signIn"> LOGIN </button>
+                <button onclick="signUp()" id="signUp"> SIGN UP </button>
+                
+                
+                <a style="float: left;" href="../index.html">back</a>
+        </div>
+    </body>
+</html>
+
