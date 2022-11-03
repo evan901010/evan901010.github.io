@@ -1,82 +1,170 @@
-<html>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Evan Hu's portfolio</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'><link rel="stylesheet" href="./style.css">
 
-    <header>
-        <a href="#" class="logo">Portfolio</a>
-        <style type="text/css">
-        @import url(style.css);
-        </style>
-        <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#content" >About</a></li>
-            <li><a href="./doc.html">Contact</a></li>
-            <li><a href="./log/log.html"  >Sign Up/In</a></li>
-            <li><a id="signOut" href="index.html">Sign Out</a></li>
-        </ul>
-    </header>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- Menu
+================================================== -->
+<nav id="art-menu" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collasped">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
 
-    <section>
-        <a href="#sec" id="btn">Explore</a>
-        <img src="main_bg/background4.png" id="bg4">
-        <img src="main_bg/background1.png" id="bg1">
-        <img src="main_bg/background2.png" id="bg2">
-        <img src="main_bg/background3.png" id="bg3">
-
-        <img src="main_bg/tree.png" id="tree">
-
-        <img src="main_bg/frontleaves.png" id="leaves_front">
-        <img src="main_bg/bush.png" id="bush">
-        
-        
-    </section>
-    
-    <div class="sec" id="sec">
-        <h2>Greeting! I'm Evan. Nice to meet you.</h2>
-        <p class="intro" >As a CS-major student, I take a fancy to computer graphics and video game design, I also fond of UI/UX design. This website is established to upload my works, they can be varied, but most can divide into the following two parts, hope you enjoy it.</p>
-        <div class="grid">
-            <div class="item">
-              <div class="content" id='content'>
-                <img src="skill/des.png" id="des" class="skill_img">
-                <h1 >Designer</h1>
-                <p class="skill_p1">I design retro-style pixel art, interactive UI/UX, and video game level design.</p>
-                <h3 class="skill_h3">Things I enjoy designing:</h3>
-                <p class="skill_p2">UX, UI, Games, Concept Art. </p>
-                <h4 class="skill_h4">Design Tools:</h4>
-                <ul class="list_1">
-                  <li class="list_content">Aseprite</li>
-                  <li class="list_content">Photoshop</li>
-                  <li class="list_content">Figma</li>
-                  <li class="list_content">Chat Mapper</li>
-                  <li class="list_content">Adobe Illustrator</li>
-                </ul>
-                <a class="btnfos btnfos-2" href="des/design.html"  >MORE WORKS</a> 
-              </div>
-            </div>
-            <div class="item">
-              <div class="content">
-                <img src="skill/dev.png" id="des"class="skill_img2">
-                <h1 >Developer</h1>
-                <p class="skill_p1">Research about Computer Graphic take up the largest proportion in my academic life.</p>
-                <h3 class="skill_h3">Languages I speak:</h3>
-                <p class="skill_p2">C#, C++, PYTHON, HTML, CSS. </p>
-                <h4 class="skill_h4">Dev Tools:</h4>
-                <ul class="list_1">
-                  <li class="list_content">VS Code</li>
-                  <li class="list_content">Unity</li>
-                  <li class="list_content">Unreal</li>
-                  <li class="list_content">OpenGL</li>
-                  <li class="list_content">OpenCV</li>
-                </ul>
-                <a class="btnfos btnfos-2" href="dev/develop.html" >MORE WORKS</a> 
-              </div>
-            </div>
-          </div>
-        
+        <!-- Navigation Toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collasped">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#home" class="scroll-nav">Home</a></li>
+                <li><a href="#about" class="scroll-nav">About</a></li>                            
+                <li><a href="#portfolio" class="scroll-nav">Project</a></li>
+                <li><a href="#portfolio" class="scroll-nav">CV</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div id="home" class="text-center">
+    <div class="layer">
+        <div class="content">
+            <h1><strong><span>You Hua (Evan) Hu</span></strong></h1>
+            <p class="lead">Computer Science major undergraduate student</p>
+            <a href="#about" class="fa fa-angle-down scroll-nav"></a>
+        </div>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="./log/out.js"></script>
-    <script src="index.js"></script>
+</div>
+<div id="about">
+    <div class="container">
+        <div class="section-title center text-center">
+            <h2><strong>ABOUT ME</strong></h2>
+            <div class="line">
+            </div>
+        </div>
+        <div class="gap"></div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="img/scavenger.png"  alt="" align="right" height="300px" width="250px" style="margin-right: 20px;">
+            </div>
+            <div class="col-md-6">
+                <p>Hi there, I’m <strong>Evan Hu</strong>.</p>
+                <p>I am a junior Computer Science major student at National Taipei University of Technology.</p>
+                <p>My research interests are <strong>Computer Graphic</strong> and <strong>Machine Learning.</strong></p>
+                <p>I do painting and develop games in my spare time. Also photo some pictures. You can see some of my work by pressing HERE.</p>
+                <a href="https://github.com/evan901010"><img src="img/github.png"  alt=""  height="50px" width="50px" ></a>
+                <a href="https://www.linkedin.com/in/%E7%A5%90%E8%8F%AF-%E8%83%A1-98773223a/"><img src="img/linkedin.png"  alt=""  height="50px" width="50px" style="margin-left: 20px;" ></a>
+                <a href="mailto:evan99068@gmail.com"><img src="img/email.png"  alt=""  height="50px" width="50px" style="margin-left: 20px;" ></a>
+            </div>
 
+        </div>
+    </div>
+
+</div>
+<div class="row">
+<div class="col-xs-12 text-center">
+  <blockquote>
+    "It's not at all important to get it right the first time. It's vitally important to get it right the last time"
+  </blockquote>
+  </div>
+</div>
+   <!-- Works
+================================================== -->
+<div id="portfolio" class="text-center">
+    <div class="container">
+
+        <div class="section-title center">
+            <h2>My Projects</h2>
+            <div class="line">
+
+            </div>
+        </div>
+        <div class="gap"></div>
+        <section id="works" class="container">
+
+
+            <ul class="portfolio-items col-2">
+                <li class="portfolio-item apps">
+                    <div class="item-inner">
+                        <img src="img/security.png" alt="">
+                        <h3>Ten Regulations as Night Shift Security</h3>
+                        <p class = "p">"Ten regulations as night shift security" is a FPS Horror game based on Unity 3D URP. 
+                            player needs to avoid the monsters in the office by staying sane and strictly obeying the staff rules.
+                        </p>
+                        <div class="layer">
+                            <a class="preview view" href="https://dev.azure.com/steven99068/NTUT_project"><i class="fa fa-eye"></i></a>
+                        </div>
+                    </div>
+                </li><!--/.portfolio-item-->
+                <li class="portfolio-item logo apps">
+                    <div class="item-inner">
+                        <img src="img/scavenger.png" alt="">
+                        <h3>Scavenger</h3>
+                        <p>"Scavenger" is a third-person shooter game developed in Unreal Engine 5 (C++), 
+                            where players must survive an influx of corpses and find everything that improves their survival.</p>
+                        <div class="layer">
+                            <a class="preview view" href="https://dev.azure.com/steven99068/Neon%20Shooter"><i class="fa fa-eye"></i></a>
+                        </div>
+                    </div>
+                </li><!--/.portfolio-item-->
+                <li class="portfolio-item logo web">
+                    <div class="item-inner">
+                        <img src="img/dungeon.jpg" alt="">
+                        <h3>Dungeon Unleashed</h3>
+                        <p>Dungeon Unleashed" is a 2D adventure game based on the C++ Game Framework developed by Professor Woei-Kae Chen. 
+                            In the game, players must kill all monsters in various dungeons to enter the next dungeon, until the last hit Down with the boss.</p>
+                        <div class="layer">
+                            <a class="preview view" href="https://github.com/evan901010/Dungeon-Unleashed"><i class="fa fa-eye"></i></a>
+                        </div>
+                    </div>
+                </li><!--/.portfolio-item-->
+                <li class="portfolio-item logo web apps">
+                    <div class="item-inner">
+                        <img src="img/accurig.png" alt="">
+                        <h3>AccuRIG in Unreal Engine 5</h3>
+                        <p>Using Unreal Engine 5 cinematic and AccuRig for computer animation. AccuRIG shorten the workflow of character rigging, 
+                            and the linkage with the ActorCore Motion library also allows users to have more and easier ways to animate.</p>
+                        <div class="layer">
+                            <a class="preview view" href="https://www.youtube.com/watch?v=3gnYhrFwUSM&feature=youtu.be&ab_channel=%E8%83%A1%E7%A5%90%E8%8F%AF"><i class="fa fa-eye"></i></a>
+                        </div>
+                    </div>
+                </li><!--/.portfolio-item-->
+            </ul>
+        </section><!--/#portfolio-->
+    </div>
+</div>     
+
+<!-- Footer
+================================================== -->
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container text-center">
+            <div class="footer-logo">
+                <a href="https://codepen.io/jvjijith/pen/woMywq">Evan Hu</a>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/placeholders/4.0.1/placeholders.jquery.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.0.0/jquery.smooth-scroll.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.3/jquery.sticky.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.js'></script><script  src="./script.js"></script>
+
+</body>
 </html>
