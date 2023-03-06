@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- D3, jquery -->
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" charset="utf-8"></script>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<title>電腦動畫 111-1</title>
+<style type="text/css">
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap');
+
+  table {
+  border-collapse: collapse;
+  border: 2px solid white; /* rgba(217,140,144,1) */
+  font-size:  12pt;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+  td,
+  th {
+  border: 1px solid white;
+  padding: 2px 8px;
+  }
+
+  .flipswitch
+  {
+      position: relative;
+      background: white;
+      width: 120px;
+      height: 20px;
+      -webkit-appearance: initial;
+      border-radius: 3px;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      outline:none;
+      font-size: 14px;
+      font-family: Trebuchet, Arial, sans-serif;
+      font-weight: bold;
+      cursor:pointer;
+      border:1px solid #ddd;
+  }
+  .flipswitch:after
+  {
+      position:absolute;
+      top:5%;
+      display:block; 
+      line-height:16px;
+      width:45%;
+      height:90%;
+      background:#fff;
+      box-sizing:border-box;
+      text-align:center;
+      transition: all 0.3s ease-in 0s; 
+      color:rgba(159,53,58,1);
+      border:#888 1px solid;
+      border-radius:3px;
+  }
+  .flipswitch:after
+  {
+      left:2%;
+      content: "未完成";
+  }
+  .flipswitch:checked:after
+  {
+      left:53%;
+      content: "完成";
+  }
+
+  body {
+    background-color: rgb(159, 53, 58);
+    color: rgb(159, 53, 58);
+    font-family: 'Noto Serif JP', sans-serif;
+  }
+
+  .container-fluid {
+    width:  90%;
+  }
+
+  .hw12 {
+    border: 1px solid rgb(159, 53, 58);
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .twenty {
+    border: 1px solid #f9eced;
+    color: #f9eced;
+    padding: 8px;
+    font-size: 16pt;
+  }
+
+  .twenty a {
+    color:  yellow;
+    font-size:  11pt;
+  }
+
+  .twenty a:hover {
+    color: #f9eced;
+    font-size:  16pt;
+  }
+
+  .thirty {
+    border: 1px solid #f9eced;
+    color: #f9eced;
+  }
+
+  .ninety {
+    border: 1px solid rgb(159, 53, 58);
+    background-color: #f9eced;
+    padding: 8px;
+  }
+
+
+
+  svg {
+    border: 2px solid rgb(159, 53, 58);
+  }
+
+  path {
+    pointer-events: all;
+    fill: #f9eced;
+    stroke: rgb(159, 53, 58);
+    stroke-opacity: 0.95;
+    stroke-width: 1px;
+  }
+
+  .active circle {
+    stroke: #f9eced;
+    stroke-width: 2px;
+  }
+
+  svg g text {
+    fill: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 0, 0.1);
+    text-shadow: 0 0 16px #FF0000, 0 0 16px #000000;
+    font-size: 24pt;
+    text-anchor: middle;
+  }
+
+    .twenty:hover {
+      /*
+        background-color: rgba(255, 255, 0, 0.1);
+      */
+        box-shadow: 0 0 5px 3px #f9eced;
+        color: cyan; 
+        text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
+    }
+
+    img:hover {
+      
+        box-shadow: 0 0 1px 1px #f9eced;
+      
+        animation-name: happy;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes happy {
+        0% {
+            transform: translateY(0px);
+        }
+
+        25% {
+            transform: translateY(-15px);
+        }
+
+        50% {
+            transform: translateY(0px);
+        }
+
+        75% {
+            transform: translateY(-5px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      <h1>作業 05</h1>
+    </div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      作業程式碼，請放在 src 檔案夾。
+      <input type="button" name="back" onclick="parent.location='./src/index.html'" value="...按我...按我...按我...">
+    </div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      這次的內容主要是在講解 Facial Motion Capture 的概念，其實 MediaPipe 不只可以用在面追蹤上，像是手部和動作的捕捉上也可以很好的應用，
+      這次的作業讓我更了解了 MediaPipe 背後的運作原理，希望之後也能用這個套件做出一個滿意的作品
+    </div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      <table>
+        <tr>
+          <th>總分</th>
+          <th>完成後打勾</th>
+          <th>配分</th>
+          <th>分項描述</th>
+        </tr>
+        <tr>
+          <td rowspan="7" id="myTotal"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
+          <td id='m1'>0</td>
+          <td>Face-Landmarks-Detection 與 Cubism 呈現於網頁上</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
+          <td id='m2'>1</td>
+          <td>Cubism角色眉毛對接</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"checked></td>
+          <td id='m3'>2</td>
+          <td>Cubism角色左右擺頭</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td id='m4'>2</td>
+          <td>Cubism角色上下點頭</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox5" checked></td>
+          <td id='m5'>1</td>
+          <td>Cubism角色眼睛開闔</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox6" checked></td>
+          <td id='m6'>2</td>
+          <td>Cubism角色歪頭</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox7" checked></td>
+          <td id='m7'>2</td>
+          <td>Cubism角色嘴巴開闔</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      <video id="video1" style="width:100%;max-width:100%;" controls="">
+        <source src="./video/evan901010.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <!-- ------------------------------------------------>
+
+
+
+<script>
+  $(function() {
+    var f = function() {
+      $(this).next().text($(this).is(':checked') ? '做完' : '未做完');
+    };
+    $('input').change(f).trigger('change');
+  });
+
+  d3.select("#myCheckbox1").on("change",update);
+  d3.select("#myCheckbox2").on("change",update);
+  d3.select("#myCheckbox3").on("change",update);
+  d3.select("#myCheckbox4").on("change",update);
+  d3.select("#myCheckbox5").on("change",update);
+  d3.select("#myCheckbox6").on("change",update);
+  d3.select("#myCheckbox7").on("change",update);
+
+  update();
+  
+  function update(){
+
+    var score = 0;
+
+    if (d3.select("#myCheckbox1").property("checked")){
+      score += parseInt(d3.select('#m1').html());
+    }
+
+    if (d3.select("#myCheckbox2").property("checked")){
+      score += parseInt(d3.select('#m2').html());   
+    }
+
+    if (d3.select("#myCheckbox3").property("checked")){
+      score += parseInt(d3.select('#m3').html());   
+    }
+
+    if (d3.select("#myCheckbox4").property("checked")){
+      score += parseInt(d3.select('#m4').html());   
+    }
+
+    if (d3.select("#myCheckbox5").property("checked")){
+      score += parseInt(d3.select('#m5').html());   
+    }
+
+    if (d3.select("#myCheckbox6").property("checked")){
+      score += parseInt(d3.select('#m6').html());   
+    }
+
+    if (d3.select("#myCheckbox7").property("checked")){
+      score += parseInt(d3.select('#m7').html());   
+    }
+
+    d3.select("#myTotal").html(score);    
+  }
+</script>
+
+</body>
+</html>
