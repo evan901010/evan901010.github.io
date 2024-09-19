@@ -1,170 +1,169 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Evan Hu's portfolio</title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'><link rel="stylesheet" href="./style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu-Hua (Evan) Hu - Academic Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<!-- Menu
-================================================== -->
-<nav id="art-menu" class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <!-- for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collasped">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+    <header>
+        <div class="header-content">
+            <h1>Yu-Hua (Evan) Hu</h1>
+            <nav>
+                <a href="#about">About Me</a>
+                <a href="#publications">Publications</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+            </nav>
         </div>
+    </header>
 
-        <!-- Navigation Toggling -->
-        <div class="collapse navbar-collapse" id="navbar-collasped">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#home" class="scroll-nav">Home</a></li>
-                <li><a href="#about" class="scroll-nav">About</a></li>                            
-                <li><a href="#portfolio" class="scroll-nav">Project</a></li>
-                <li><a href="./cv.pdf">CV</a></li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
-<div id="home" class="text-center">
-    <div class="layer">
-        <div class="content">
-            <h1><strong><span>You Hua (Evan) Hu</span></strong></h1>
-            <p class="lead">Computer Science major undergraduate student</p>
-            <a href="#about" class="fa fa-angle-down scroll-nav"></a>
-        </div>
+    <div class="content">
+        <!-- About Section -->
+        <section id="about" class="profile">
+            <div class="profile-left">
+                <img class="profile-image" src="./images/evan.jpg" alt="Yu-Hua (Evan) Hu">
+                <div class="profile-info">
+                    <h1 class="profile-name">Yu-Hua Hu</h1>
+                    <div class="profile-title-university">
+                        <span>Research Assistant</span>
+                        <span>Academia Sinica</span>
+                    </div>
+                    <div class="contact-icons">
+                        <a href="mailto:your.email@example.com" title="Email">✉️</a>
+                        <a href="https://www.linkedin.com/in/yourprofile" title="LinkedIn">in</a>
+                        <a href="path/to/your/cv.pdf" title="CV">CV</a>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-right">
+                <div class="about-me-content">
+                    <p>I am Yu-Hua (Evan) Hu, currently working as a Research Assistant at the Multimedia Technology Lab, Institute of Information Science, Academia Sinica, under the supervision of <a href="https://sites.google.com/site/jenchunlin/" target="_blank">Dr. Jen-Chun Lin</a>. My research interests lie in the combination of computer graphics and machine learning, with a focus on digital humans and human animation.</p>
+                    <p>Before joining Academia Sinica, I received my Bachelor's degree in Computer Science and Information Engineering (CSIE) from National Taipei University of Technology.</p>
+                    
+                </div>
+
+                
+                <h2>News</h2>
+                <div class="news-section">
+                    
+                    <ul class="news-list">
+                      <li>2024.09: 🎉 Will attend <strong>Siggraph Asia 2024 Tokyo</strong> as Student Volunteer!</li>
+                      <li>2024.06: 🎓 Graduate from Nataional Taipei University of Technology <strong>with Honor!</strong></li>
+                      <li>2024.02:  🎉 One paper is accepted by ICASSP 2024!</li>
+                    </ul>
+                  </div>
+                                                                 
+            </div>
+        </section>
+
+        <hr class="publication-divider" />
+
+        <!-- Publications Section -->
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="publication-year">-2024-</div>
+        
+            <div class="publication">
+                <a href="https://example.com/project1" target="_blank">
+                    <img class="publication-image" src="./images/publication/music_to_dance.png" alt="Publication Image">
+                </a>
+                <div class="publication-details">
+                    <h3>Music-to-Dance Poses: Learning to Retrieve Dance Poses from Music</h3>
+                    <p>Bo-Wei Tseng, Kenneth Yang, <strong>Yu-Hua Hu</strong>, Wen-Li Wei, Jen-Chun Lin</p>
+                    <p><em>ICASSP 2024 - 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em></p>
+                    <p>
+                        <a href="https://ieeexplore.ieee.org/document/10446425">[Paper]</a>
+                    </p>
+                </div>
+            </div>
+        
+        </section>
+        
+        <hr class="project-divider" />
+
+        <!-- project Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+        
+            <div class="project">
+                <a href="https://example.com/project1" target="_blank">
+                    <img class="project-image" src="./images/project/security.png" alt="Project Image">
+                </a>
+                <div class="project-details">
+                    <h3>Emotion-Driven Dynamic Gameplay Adaptation: Enhancing Immersion in Horror Games</h3>
+                    <p>In this horror game, the events and progression are intricately
+                    tied to the player’s emotions. As users experience different emotions, the game dynamically triggers various events and modifies
+                    the surrounding environment. These adaptations include changes
+                    in lighting, sound effects, object interactions, or even alterations
+                    to the ending.</p>
+                    <p>
+                        <a href="https://youtu.be/wQ8dMBTl-Cs?si=XhC0hhHTz3nd4Gee"  target="_blank">[Video]</a>
+                    </p>
+                </div>
+            </div>
+        
+            <div class="project">
+                <img class="project-image" src="./images/project/mediapipe.png  " alt="Project Image">
+                <div class="project-details">
+                    <h3>Realtime Vtuber sync!</h3>
+                    <p>Expanded the MediaPipe to detect and track human
+                        facial features, and integrated the detected nodes with Live2D
+                        models, enabling users to manipulate virtual characters via camera</p>
+                    <p>
+                        <a href="./mediapipe_src/src/index.html">[Project page]</a>
+                    </p>
+                </div>
+            </div>
+
+        </section>
+        
+        <hr class="project-divider" />
+
+        <section id="experience">
+            <h2>Experience</h2>
+        
+            <div class="experience-item">
+                <img src="./images/experience/iislogo.jpg" alt="Academia Sinica Logo" class="experience-image">
+                <div class="experience-details">
+                    <h3>Academia Sinica</h3>
+                    <p><strong>Research Assistant</strong> | JUL. 2023 - Present</p>
+                    <ul>
+                        <li>Conducting research to develop a lightweight approach for integrating sequential knowledge into image-based 3D human pose and shape estimation models, 
+                            improving performance without significantly increasing trainable parameters.</li>
+                        <li>Analyzed AIST++ dance dataset (images, audio) and implemented model components for music-to-dance retrieval research.</li>
+                        <li>Designed a 3D human animation pipeline for visualizing music-to-dance choreography</li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="experience-item">
+                <img src="./images/experience/reallusion.png" alt="Reallusion Logo" class="experience-image">
+                <div class="experience-details">
+                    <h3>Reallusion</h3>
+                    <p><strong>R&D Intern</strong> | JAN. 2023 - JUN. 2023</p>
+                    <ul>
+                        <li>Developed "BuildingGen", a procedural 3D building generator plugin for iClone8, 
+                            enabling instant creation of customizable buildings.</li>
+                        <li>Contributed to the development of "Motion Director", a major update for iClone8. Participated in developing NPC AI Animation, 
+                            focusing on crowd distribution and interactions.</li>
+                    </ul>
+                </div>
+                
+            </div>
+        
+            <!-- 可以依此格式添加更多 Experience -->
+        </section>
+        
+        
+        
     </div>
 
-</div>
-<div id="about">
-    <div class="container">
-        <div class="section-title center text-center">
-            <h2><strong>ABOUT ME</strong></h2>
-            <div class="line">
-            </div>
-        </div>
-        <div class="gap"></div>
-        <div class="row">
-            <div class="col-md-6">
-                <img src="./img/evan.jpg"  alt="" align="right" height="300px" width="250px" style="margin-right: 20px;">
-            </div>
-            <div class="col-md-6">
-                <p>Hi there, I’m <strong>Evan Hu</strong>.</p>
-                <p>I am a junior Computer Science major student at National Taipei University of Technology.</p>
-                <p>My research interests are <strong>Computer Graphic</strong> and <strong>Machine Learning.</strong></p>
-                <p>I do painting and develop games in my spare time. Also photo some pictures.</p>
-                <a href="https://github.com/evan901010"><img src="img/github.png"  alt=""  height="50px" width="50px" ></a>
-                <a href="https://www.linkedin.com/in/%E7%A5%90%E8%8F%AF-%E8%83%A1-98773223a/"><img src="img/linkedin.png"  alt=""  height="50px" width="50px" style="margin-left: 20px;" ></a>
-                <a href="mailto:evan99068@gmail.com"><img src="img/email.png"  alt=""  height="50px" width="50px" style="margin-left: 20px;" ></a>
-            </div>
-
-        </div>
-    </div>
-
-</div>
-<div class="row">
-<div class="col-xs-12 text-center">
-  <blockquote>
-    "It's not at all important to get it right the first time. It's vitally important to get it right the last time"
-  </blockquote>
-  </div>
-</div>
-   <!-- Works
-================================================== -->
-<div id="portfolio" class="text-center">
-    <div class="container">
-
-        <div class="section-title center">
-            <h2>My Projects</h2>
-            <div class="line">
-
-            </div>
-        </div>
-        <div class="gap"></div>
-        <section id="works" class="container">
-
-
-            <ul class="portfolio-items col-2">
-                <li class="portfolio-item apps">
-                    <div class="item-inner">
-                        <img src="img/security.png" alt="">
-                        <h3>Ten Regulations as Night Shift Security</h3>
-                        <p class = "p">"Ten regulations as night shift security" is a FPS Horror game based on Unity 3D URP. 
-                            player needs to avoid the monsters in the office by staying sane and strictly obeying the staff rules.
-                        </p>
-                        <div class="layer">
-                            <a class="preview view" href="https://dev.azure.com/steven99068/NTUT_project"><i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                </li><!--/.portfolio-item-->
-                <li class="portfolio-item logo apps">
-                    <div class="item-inner">
-                        <img src="img/scavenger.png" alt="">
-                        <h3>Scavenger</h3>
-                        <p>"Scavenger" is a third-person shooter game developed in Unreal Engine 5 (C++), 
-                            where players must survive an influx of corpses and find everything that improves their survival.</p>
-                        <div class="layer">
-                            <a class="preview view" href="https://dev.azure.com/steven99068/Neon%20Shooter"><i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                </li><!--/.portfolio-item-->
-                <li class="portfolio-item logo web">
-                    <div class="item-inner">
-                        <img src="img/dungeon.jpg" alt="">
-                        <h3>Dungeon Unleashed</h3>
-                        <p>Dungeon Unleashed" is a 2D adventure game based on the C++ Game Framework developed by Professor Woei-Kae Chen. 
-                            In the game, players must kill all monsters in various dungeons to enter the next dungeon, until the last hit Down with the boss.</p>
-                        <div class="layer">
-                            <a class="preview view" href="https://github.com/evan901010/Dungeon-Unleashed"><i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                </li><!--/.portfolio-item-->
-                <li class="portfolio-item logo web apps">
-                    <div class="item-inner">
-                        <img src="img/mediapipe.png" alt="">
-                        <h3>Mediapipe implement Anime Live 2D</h3>
-                        <p>Expanded the open-source framework MediaPipe to detect, recognize, and track facial features and connected the detected nodes with Live 2D models provided by Cubism, 
-                            allowing users to manipulate virtual characters through a camera and conduct live streaming.</p>
-                        <div class="layer">
-                            <a class="preview view" href="./mediapipe_src/src/index.html"><i class="fa fa-eye"></i></a>
-                        </div>
-                    </div>
-                </li><!--/.portfolio-item-->
-            </ul>
-        </section><!--/#portfolio-->
-    </div>
-</div>     
-
-<!-- Footer
-================================================== -->
-<footer id="footer">
-    <div class="footer-top">
-        <div class="container text-center">
-            <div class="footer-logo">
-                <a >Evan Hu</a>
-            </div>
-        </div>
-    </div>
-
-</footer>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/placeholders/4.0.1/placeholders.jquery.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.0.0/jquery.smooth-scroll.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.3/jquery.sticky.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.js'></script><script  src="./script.js"></script>
-
+    <script src="scripts.js"></script>
 </body>
+
 </html>

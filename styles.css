@@ -1,0 +1,383 @@
+body, p, a {
+    font-family: 'Arial', sans-serif;
+    font-weight: 300;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+      font-weight: 400;
+  }
+
+  body {
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding-top: 60px;
+  }
+
+  .header-content h1 {
+    font-size: 24px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    color: #000;
+}
+  header {
+      background-color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      height: 60px;
+  }
+  .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      padding: 0px 220px;
+      height: 100%;
+  }
+  nav {
+      display: flex;
+      align-items: center;
+      padding-right: 100px;
+  }
+  nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 300;
+      color: #333;
+      font-size: 16px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom-color 0.3s ease;
+  }
+  nav a:hover, nav a.active {
+      border-bottom-color: #333;
+  }
+
+  nav a:hover {
+      color: #333;
+  }
+
+  .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-left: 200px;
+      margin-right: 200px;
+  }
+
+  .profile {
+      display: flex;
+      gap: 100px;
+      margin-bottom: 20px;
+  }
+  .profile-left {
+      flex: 0 0 200px;
+      margin-left: 50px;
+  }
+  .profile-right {
+      flex: 1;
+  }
+  .profile-image {
+      width: 200px;
+      height: auto;
+      object-fit: cover;
+  }
+  .profile-info {
+      margin-top: 10px;
+      text-align: center;
+  }
+  .profile-title-university {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+  .profile-title-university p {
+  margin: 2px 0;
+  }
+  .profile-name {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 5px;
+  }
+  .profile-title, .profile-university {
+      font-size: 16px;
+      margin: 0 0 5px 0;
+  }
+  .contact-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+  }
+  .contact-icons a {
+      width: 30px;
+      height: 30px;
+      background-color: #333;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+  }
+  .about-me-content {
+  font-size: 16px !important;
+  }
+  .about-me-content p {
+      font-size: 16px !important;
+  }
+  .profile p {
+      text-align: justify;
+      text-justify: inter-word;
+      font-size: 16px;
+  }
+
+  .publications, .teaching, .experience {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  }
+  .publication, .teaching-item, .experience-item {
+      border: 1px solid #ddd;
+      padding: 10px;
+  }
+  .publication img {
+      width: 100%;
+      height: auto;
+      max-width: 300px;
+  }
+
+  #publications {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#publications h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.publication-divider {
+    margin-bottom: 20px;
+}
+
+.publication-year {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.publication {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.publication img.publication-image {
+    width: 250px;
+    height: 160px;
+    margin-right: 20px;
+}
+
+.publication-details {
+    flex: 1;
+}
+
+.publication h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.publication p {
+    margin: 5px 0;
+}
+
+.publication p em {
+    font-size: 14px;
+    color: #777;
+}
+
+.publication a {
+    text-decoration: none;
+    color: #0073e6;
+    margin-right: 10px;
+}
+
+.publication a:hover {
+    text-decoration: underline;
+}
+
+/* Projects Section */
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Project Cards with Borders */
+.project {
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+#projects {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#projects h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.project-divider {
+    margin-bottom: 20px;
+}
+
+.project-year {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #666;
+}
+
+/* Image styling inside project */
+.project img.project-image {
+    width: 250px;
+    height: 160px;
+    margin-right: 20px;
+}
+
+.project-details {
+    flex: 1;
+    text-align: justify;
+}
+
+.project h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.project p {
+    margin: 5px 0;
+}
+
+.project p em {
+    font-size: 14px;
+    color: #777;
+}
+
+.project a {
+    text-decoration: none;
+    color: #0073e6;
+    margin-right: 10px;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+
+/* Experience */
+.experience-item {
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.experience-item img {
+    width: 250px; 
+    height: auto;
+    margin-right: 20px;
+}
+
+.experience-details {
+    flex: 1; 
+    text-align: justify;
+}
+
+.experience-details h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px 0; 
+}
+
+.experience-details p, 
+.experience-details ul {
+    margin: 5px 0; 
+}
+
+.experience-details ul {
+    margin-top: 10px;
+    list-style-type: disc;
+    padding-left: 20px; 
+}
+
+.news-section {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    height: 100px; /* Set the fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
+  .news-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .news-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .news-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .news-list a {
+    color: #0073e6;
+    text-decoration: none;
+  }
+  
+  .news-list a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Optional: Add custom scrollbar styles */
+  .news-section::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .news-section::-webkit-scrollbar-thumb {
+    background-color: #0073e6;
+    border-radius: 10px;
+  }
+  
+  .news-section::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  
