@@ -292,6 +292,21 @@ body, p, a {
     text-decoration: underline;
 }
 
+.publication-links{
+    margin-top: 35px;
+}
+
+.project-links {
+    margin-top: 10px; /* 将链接推到容器的底部 */
+}
+
+.project-links-2 {
+    margin-top: 35px; /* 将链接推到容器的底部 */
+}
+
+.invisible-text {
+    color: #fff; /* 将颜色设为白色，确保它在白色背景上不可见 */
+}
 
 /* Experience */
 .experience-item {
@@ -355,15 +370,6 @@ body, p, a {
   .news-list li {
     margin-bottom: 10px;
     font-size: 16px;
-  }
-  
-  .news-list a {
-    color: #0073e6;
-    text-decoration: none;
-  }
-  
-  .news-list a:hover {
-    text-decoration: underline;
   }
   
   /* Optional: Add custom scrollbar styles */
